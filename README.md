@@ -1,5 +1,7 @@
 # Project 1 - Build Your Personal Website
 
+**Live site: [midhatsajad.github.io](https://midhatsajad.github.io)**
+
 **CSCI 498E / 598E - Coding with AI Agents**
 
 | | |
