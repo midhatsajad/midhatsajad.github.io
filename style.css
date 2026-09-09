@@ -5,8 +5,12 @@
    Delete all of it whenever you want. */
 
 :root {
-  /* Makes the page follow the reader's light or dark mode setting, for free. */
-  color-scheme: light dark;
+  /* The page now commits to a fixed light pink look, so it no longer
+     follows the reader's dark mode setting. */
+  color-scheme: light;
+
+  --bg-pink: #fbe4ec;
+  --heading-pink: #b3355e;
 }
 
 body {
@@ -21,16 +25,23 @@ body {
   padding: 4rem 1.5rem;
   line-height: 1.6;
   font-size: 1.125rem;
+  background-color: var(--bg-pink);
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiB2aWV3Qm94PSIwIDAgMTgwIDE4MCI+CiAgPGcgZmlsbD0iI2U3OWNiNSIgb3BhY2l0eT0iMC4yMiI+CiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MCw0NSkiPgogICAgICA8Y2lyY2xlIGN4PSI5IiBjeT0iMCIgcj0iNyIvPgogICAgICA8Y2lyY2xlIGN4PSIyLjgiIGN5PSI4LjYiIHI9IjciLz4KICAgICAgPGNpcmNsZSBjeD0iLTcuMyIgY3k9IjUuMyIgcj0iNyIvPgogICAgICA8Y2lyY2xlIGN4PSItNy4zIiBjeT0iLTUuMyIgcj0iNyIvPgogICAgICA8Y2lyY2xlIGN4PSIyLjgiIGN5PSItOC42IiByPSI3Ii8+CiAgICAgIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSI0IiBmaWxsPSIjYzk2NzhjIi8+CiAgICA8L2c+CiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzAsMTIwKSBzY2FsZSgwLjYpIj4KICAgICAgPGNpcmNsZSBjeD0iOSIgY3k9IjAiIHI9IjciLz4KICAgICAgPGNpcmNsZSBjeD0iMi44IiBjeT0iOC42IiByPSI3Ii8+CiAgICAgIDxjaXJjbGUgY3g9Ii03LjMiIGN5PSI1LjMiIHI9IjciLz4KICAgICAgPGNpcmNsZSBjeD0iLTcuMyIgY3k9Ii01LjMiIHI9IjciLz4KICAgICAgPGNpcmNsZSBjeD0iMi44IiBjeT0iLTguNiIgcj0iNyIvPgogICAgICA8Y2lyY2xlIGN4PSIwIiBjeT0iMCIgcj0iNCIgZmlsbD0iI2M5Njc4YyIvPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  color: #2a2a2a;
 }
 
 h1 {
   font-size: 3rem;
   line-height: 1.1;
   margin-bottom: 1.5rem;
+  color: var(--heading-pink);
 }
 
 h2 {
   margin-bottom: 1.5rem;
+  color: var(--heading-pink);
 }
 
 h3 {
@@ -48,10 +59,32 @@ p {
 
 section {
   margin-top: 3rem;
+  clear: both;
+}
+
+.intro-photo {
+  float: left;
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  margin: 0 1.5rem 1rem 0;
 }
 
 .entry {
   margin-bottom: 2rem;
+}
+
+.entry-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.company-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 
 .entry-meta {
@@ -66,4 +99,62 @@ section {
 
 .edu-list li {
   margin-bottom: 0.75rem;
+}
+
+.hobby-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hobby {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  border: 1px solid var(--heading-pink);
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  font-weight: 600;
+  color: var(--heading-pink);
+}
+
+.hobby-icon {
+  font-size: 1.25rem;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skill {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.skill-name {
+  min-width: 11rem;
+  font-weight: 600;
+}
+
+.level-btn {
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.85rem;
+  border: 1px solid var(--heading-pink);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--heading-pink);
+  cursor: pointer;
+}
+
+.level-btn.active {
+  background: var(--heading-pink);
+  color: #fff;
 }
