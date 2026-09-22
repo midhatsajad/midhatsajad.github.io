@@ -14,7 +14,7 @@ Delete these instructions when you are done, or leave them. It does not matter.
 What you wanted at the start, and what is actually live now.
 Name one thing you dropped or added along the way, and why.
 
-*Your answer here.*
+I started with the single-page site from Lab 04 and developed it into a multi-page personal website with sections for my About, Research, Experience, Education, Skills, Hobbies, Journey, Travelling, and Contact information. I also added a custom logo, photo dashboards, and cards linking to Wikipedia. Along the way, I replaced the original pink theme with a light-blue design and removed the painted SVG illustrations from the Hobbies page because I preferred using my own photos.
 
 ---
 
@@ -28,7 +28,7 @@ Say which you picked, what the alternative was, and what you gave up by not taki
 
 "There was no alternative" is not an answer. Find the fork.
 
-*Your answer here.*
+One major choice was keeping the site as a single page or changing it to multiple pages. I chose multiple pages because it made the different parts of my background easier to organize and navigate. The tradeoff was having more HTML files and more consistency to maintain across the site.
 
 ---
 
@@ -42,7 +42,7 @@ If it genuinely never happened, say so plainly, and then say what you would have
 check in order to notice. Being honest here costs you far less than a story you cannot
 defend when you record your video.
 
-*Your answer here.*
+The Hobbies page had several photos paired with the wrong descriptions. I noticed that the pictures and captions did not match, so I stopped and re-checked each photo against its actual content before correcting the page. This showed me that I should verify image-based information rather than assume the agent matched everything correctly.
 
 ---
 
@@ -55,7 +55,9 @@ A check that could not have failed is not a check.
 
 Link to your `verification/` folder.
 
-*Your answer here.*
+I checked the site using a local server and verified that the pages returned HTTP 200 responses and that the HTML and CSS could be loaded. However, this does not confirm how everything looks in a real browser. The check could fail if a page returned an error, a file path was broken, or required CSS/assets were missing.
+
+The verification files are in the `verification/` folder.
 
 ---
 
@@ -66,4 +68,6 @@ fully understand.
 
 What would you do next, and how would you find out?
 
-*Your answer here.*
+The site had some repeated photos, especially TBM-related photos, because I did not have enough different source photos. I would also like to verify the external GitHub and LinkedIn links and test the site in an actual browser. My next step would be to check those links and visually inspect every page at different screen sizes.
+
+#.Update: I checked and they are all working.
