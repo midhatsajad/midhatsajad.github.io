@@ -320,8 +320,26 @@ section {
   height: 165px;
 }
 
+/* About Me: photo (with its caption underneath) sits beside the text
+   rather than stacked above it, and wraps to stacked on narrow screens. */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+}
+
+.about-content .profile-photo-wrap {
+  flex: 0 0 auto;
+}
+
+.about-content .about-text {
+  flex: 1 1 320px;
+  min-width: 280px;
+}
+
 .profile-photo-wrap {
-  margin: 1.5rem 0 2.5rem;
   text-align: center;
 }
 
