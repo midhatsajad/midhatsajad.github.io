@@ -89,16 +89,11 @@ a {
 
 .hero .intro-copy {
   font-size: 1.1rem;
-  color: var(--text-soft);
   width: 100%;
   max-width: 1100px;
   margin: 0 0 2rem;
   text-align: justify;
   text-align-last: left;
-}
-
-.page-intro {
-  color: var(--text-soft);
 }
 
 .site-nav ul {
@@ -132,6 +127,23 @@ a {
   width: 2.5rem;
   height: 2.5rem;
   cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  color: #fff;
 }
 
 /* Hero (index.html) */
@@ -281,12 +293,31 @@ section {
   margin-bottom: 1rem;
 }
 
+/* Research page photo rows: portrait and landscape photos are grouped
+   into their own rows rather than mixed, so the gallery reads cleanly
+   instead of as a scatter of floats of different shapes. */
+
+.photo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
 .intro-photo {
-  float: left;
-  width: 200px;
-  height: auto;
+  display: block;
   border-radius: 12px;
-  margin: 0 1.5rem 1rem 0;
+  object-fit: cover;
+}
+
+.photo-row.vertical .intro-photo {
+  width: 150px;
+  height: 230px;
+}
+
+.photo-row.horizontal .intro-photo {
+  width: 260px;
+  height: 165px;
 }
 
 .profile-photo-wrap {
