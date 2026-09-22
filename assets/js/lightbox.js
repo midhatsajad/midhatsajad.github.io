@@ -4,9 +4,9 @@
   var lb, imgEl, captionEl, closeBtn, prevBtn, nextBtn;
 
   function buildBoards() {
-    document.querySelectorAll(".hobby-board").forEach(function (board) {
+    document.querySelectorAll("[data-board]").forEach(function (board) {
       var key = board.dataset.board;
-      var imgs = Array.from(board.querySelectorAll(".hobby-photo-grid img")).map(function (img) {
+      var imgs = Array.from(board.querySelectorAll("button img")).map(function (img) {
         return { src: img.getAttribute("src"), alt: img.getAttribute("alt") };
       });
       boards[key] = imgs;
@@ -60,9 +60,9 @@
 
     buildBoards();
 
-    document.querySelectorAll(".hobby-board").forEach(function (board) {
+    document.querySelectorAll("[data-board]").forEach(function (board) {
       var key = board.dataset.board;
-      board.querySelectorAll(".hobby-photo-grid button").forEach(function (btn, index) {
+      board.querySelectorAll("button").forEach(function (btn, index) {
         btn.addEventListener("click", function () {
           open(key, index);
         });

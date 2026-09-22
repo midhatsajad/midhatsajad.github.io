@@ -11,7 +11,7 @@
   --text-soft: #5b7285;
   --accent: #2f6690;
   --accent-2: #6ba3c7;
-  --accent-black: #16232c;
+  --accent-black: #123a5c;
   --card-bg: #ffffff;
   --card-border: #cfe0ea;
   --nav-bg: rgba(244, 249, 252, 0.9);
@@ -90,9 +90,11 @@ a {
 .hero .intro-copy {
   font-size: 1.1rem;
   color: var(--text-soft);
-  max-width: 60ch;
+  width: 100%;
+  max-width: 1100px;
   margin: 0 0 2rem;
-  text-align: left;
+  text-align: justify;
+  text-align-last: left;
 }
 
 .page-intro {
@@ -141,7 +143,8 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 3rem 1.5rem;
+  padding: 3rem clamp(1rem, 4vw, 3rem);
+  width: 100%;
 }
 
 .hero h1 {
@@ -179,9 +182,10 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
   width: 100%;
-  max-width: 900px;
-  padding: 0 1.5rem 3rem;
-  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 0 3rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .menu-card {
@@ -213,13 +217,10 @@ a {
 /* Sub-pages */
 
 .page {
-  max-width: 65ch;
-  margin: 0 auto;
-  padding: 3rem 1.5rem 4rem;
-}
-
-.page.wide {
-  max-width: 900px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem clamp(1rem, 4vw, 3rem) 4rem;
 }
 
 h1 {
@@ -227,19 +228,43 @@ h1 {
   line-height: 1.1;
   margin-bottom: 1.5rem;
   color: var(--accent-black);
+  text-align: center;
 }
 
 h2 {
   margin-bottom: 1.5rem;
   color: var(--accent-black);
+  text-align: center;
 }
 
 h3 {
   margin-bottom: 0.25rem;
 }
 
+/* Main body paragraphs use the full width of the (already centered)
+   .page container, same as headings, and are justified so long lines
+   read as a clean, even block instead of a narrow ragged-right column
+   with dead space beside it. Justify is a no-op on text that doesn't
+   wrap, so short captions are unaffected by default; the handful that
+   do sometimes wrap to two lines are set back to left-aligned below. */
 p {
   margin-bottom: 1.75rem;
+  text-align: justify;
+  text-align-last: left;
+}
+
+.entry-meta,
+.favorites-note,
+.hobby-desc,
+.favorite-card-body p,
+.lightbox-caption {
+  text-align: left;
+}
+
+/* Sits directly under the centered photo, so it should stay centered
+   with it rather than pick up the default paragraph justify. */
+.profile-photo-caption {
+  text-align: center;
 }
 
 section {
@@ -380,64 +405,6 @@ section {
   color: #fff;
 }
 
-/* Hobbies board: a Pinterest-style masonry of painted illustrations */
-
-.board {
-  column-count: 2;
-  column-gap: 1rem;
-}
-
-@media (min-width: 640px) {
-  .board {
-    column-count: 3;
-  }
-}
-
-.board-card {
-  break-inside: avoid;
-  margin-bottom: 1rem;
-  border-radius: 14px;
-  overflow: hidden;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-}
-
-.board-card svg {
-  display: block;
-  width: 100%;
-  height: auto;
-  animation: float 6s ease-in-out infinite;
-}
-
-.board-card:nth-child(2n) svg {
-  animation-delay: -2s;
-}
-
-.board-card:nth-child(3n) svg {
-  animation-delay: -4s;
-}
-
-.board-caption {
-  padding: 0.6rem 0.9rem 0.9rem;
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-4px);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .board-card svg {
-    animation: none;
-  }
-}
-
 /* Little Things I Love */
 
 .little-things {
@@ -558,6 +525,7 @@ section {
 
 .hobby-board h3 {
   margin-bottom: 0.35rem;
+  text-align: center;
 }
 
 .hobby-board .hobby-desc {
@@ -601,6 +569,25 @@ section {
 .hobby-photo-grid button:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 2px;
+}
+
+/* Journey photo collage: a small, static mosaic of square thumbnails
+   mixed from every hobby folder, not clickable/zoomable, just a quick
+   visual summary of the journey rather than a browsable gallery. */
+
+.journey-collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+.journey-collage img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 /* Lightbox */
