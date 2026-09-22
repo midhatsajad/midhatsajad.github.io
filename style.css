@@ -70,6 +70,30 @@ section {
   margin: 0 1.5rem 1rem 0;
 }
 
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.about h2 {
+  flex-basis: 100%;
+}
+
+.profile-photo {
+  width: 220px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+@media (max-width: 640px) {
+  .about {
+    flex-direction: column;
+  }
+}
+
 .entry {
   margin-bottom: 2rem;
 }
