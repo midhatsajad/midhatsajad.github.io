@@ -1,0 +1,15 @@
+<svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logo-title">
+  <title id="logo-title">Monogram: M world</title>
+  <circle cx="90" cy="90" r="85" fill="none" stroke="#8fb8d4" stroke-width="1"/>
+  <circle cx="90" cy="90" r="84" fill="#d9ecf5"/>
+  <g fill="#eeaec4">
+    <circle cx="130" cy="41" r="7"/>
+    <circle cx="139" cy="47" r="7"/>
+    <circle cx="135" cy="57" r="7"/>
+    <circle cx="125" cy="57" r="7"/>
+    <circle cx="121" cy="47" r="7"/>
+  </g>
+  <circle cx="130" cy="50" r="4" fill="#c9a227"/>
+  <text x="90" y="86" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="38" fill="#3f6d8e">M</text>
+  <text x="90" y="114" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="22" fill="#3f6d8e" style="letter-spacing:2px">world</text>
+</svg>

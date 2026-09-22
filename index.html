@@ -5,297 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Midhat Sajad</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <script src="assets/js/theme.js"></script>
 </head>
 <body>
 
-  <header>
-    <h1>Midhat Sajad</h1>
-    <p class="tagline">
-      Tunnel design engineer turned PhD researcher, building simulation tools
-      for underground construction.
+  <nav class="site-nav">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" class="brand-logo" aria-hidden="true">Midhat Sajad</a>
+    <ul>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="intro.html">Research</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="journey.html">Journey</a></li>
+      <li><a href="travelling.html">Travelling</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark mode">🌙</button>
+  </nav>
+
+  <header class="hero">
+    <img src="assets/logo.svg" alt="Midhat Sajad monogram logo" class="hero-logo">
+    <h1><span class="tone-1">Welcome to my</span> <span class="tone-2">world</span></h1>
+    <p class="intro-copy">
+      Welcome to my world&mdash;a space where I share my journey, experiences,
+      research, and the things that inspire me. I'm a researcher and tunnel
+      engineering enthusiast with a passion for understanding how technology,
+      data, and innovation can shape the future of underground construction.
+      Beyond my research, this website is a glimpse into who I am beyond the
+      work: my experiences, interests, hobbies, travels, and the moments that
+      make my journey unique. Whether you're here to learn about my research,
+      explore my professional journey, or simply get to know me better, I'm
+      glad you're here.
     </p>
+    <p class="prompt">What do you want to know?</p>
+
+    <div class="menu-grid">
+      <a class="menu-card" href="about.html">
+        <span class="emoji" aria-hidden="true">🙋</span>
+        About Me
+      </a>
+      <a class="menu-card" href="intro.html">
+        <span class="emoji" aria-hidden="true">📖</span>
+        My PhD Research Interest
+      </a>
+      <a class="menu-card" href="experience.html">
+        <span class="emoji" aria-hidden="true">💼</span>
+        My Experience
+      </a>
+      <a class="menu-card" href="hobbies.html">
+        <span class="emoji" aria-hidden="true">🥾</span>
+        My Hobbies
+      </a>
+      <a class="menu-card" href="education.html">
+        <span class="emoji" aria-hidden="true">🎓</span>
+        Education
+      </a>
+      <a class="menu-card" href="skills.html">
+        <span class="emoji" aria-hidden="true">🛠️</span>
+        Skills
+      </a>
+    </div>
   </header>
-
-  <section>
-    <h2>Introduction</h2>
-    <img
-      src="assets/photos/intro-photo.jpg"
-      alt="Inside a timber-lined tunnel"
-      class="intro-photo"
-    >
-    <p>
-      I'm a PhD student in Underground Construction and Tunnel Engineering
-      at Colorado School of Mines, working with Prof. Jamal Rostami. My research
-      is to develop a discrete event simulation model for predicting TBM (tunnel
-      boring machine) utilization and performance, one part of a larger
-      cloud-based simulation app I'm building for the work.
-    </p>
-    <p>
-      Alongside the PhD, I've also taught MNGN321 (Introduction to Rock Mechanics)
-      and MNGN404 (Tunnelling) as a teaching assistant, and I've previously interned
-      with WSP and ARUP's Tunneling and Underground Space group.
-    </p>
-  </section>
-
-  <section class="about">
-    <h2>About</h2>
-    <img
-      src="assets/photos/profile.jpg"
-      alt="Portrait of Midhat Sajad"
-      class="profile-photo"
-    >
-    <p>
-      Outside of research, I'm the person you'll find planning the next hike or
-      trying a new recipe. I bring the same care for detail from tunnel design
-      to whatever I'm building next.
-    </p>
-  </section>
-
-  <section>
-    <h2>Experience</h2>
-
-    <article class="entry">
-      <div class="entry-header">
-        <a href="https://www.arup.com" target="_blank" rel="noopener">
-          <img src="assets/logos/Arup_Red_RGB.png" alt="Arup logo" class="company-logo">
-        </a>
-        <div>
-          <h3>Tunneling and Underground Space Intern</h3>
-          <p class="entry-meta">ARUP, San Francisco, CA &middot; Summer 2026</p>
-        </div>
-      </div>
-      <p>Worked on the BART CP2 project in California and the Bloor&ndash;Yonge project in Toronto.</p>
-    </article>
-
-    <article class="entry">
-      <div class="entry-header">
-        <a href="https://www.wsp.com" target="_blank" rel="noopener">
-          <img src="assets/logos/WSP_Red_RGB.png" alt="WSP logo" class="company-logo">
-        </a>
-        <div>
-          <h3>Geotech and Tunneling Intern</h3>
-          <p class="entry-meta">WSP, Lakewood, CO &middot; May 2025&ndash;May 2026</p>
-        </div>
-      </div>
-      <p>
-        Developed geotechnical baseline reports and schedules for major
-        tunneling projects including the MWRA Boston tunnel and I-94, and
-        contributed to precast segmental lining design. Supported
-        micro-tunneling projects in the US and Canada with jacking-force
-        calculations for vertical curve alignments.
-      </p>
-    </article>
-
-    <article class="entry">
-      <div class="entry-header">
-        <a href="https://www.mines.edu" target="_blank" rel="noopener">
-          <img src="assets/logos/CSM.png" alt="Colorado School of Mines logo" class="company-logo">
-        </a>
-        <div>
-          <h3>Teaching Assistant</h3>
-          <p class="entry-meta">Colorado School of Mines, Golden, CO &middot; 2024&ndash;2026</p>
-        </div>
-      </div>
-      <p>Teaching MNGN321 (Rock Mechanics) and MNGN404 (Tunnelling), and working with Prof. Rostami and Prof. Nelson at the Earth Mechanics Institute.</p>
-    </article>
-
-    <article class="entry">
-      <div class="entry-header">
-        <a href="https://www.larsentoubro.com" target="_blank" rel="noopener">
-          <img src="assets/logos/LnT.png" alt="Larsen & Toubro logo" class="company-logo">
-        </a>
-        <div>
-          <h3>Assistant Engineering Manager</h3>
-          <p class="entry-meta">Larsen &amp; Toubro, EDRC &ndash; Metro and Railways, India &middot; 2021&ndash;2024</p>
-        </div>
-      </div>
-      <p>
-        Designed and managed major metro and railway projects: rock-support
-        interaction analysis, ground improvement, slope stability, and
-        tunnel structure design. Led international work including the
-        Mauritius Metro Light Rail and Riyadh Metro Line 3, and contributed
-        to the Delhi&ndash;Meerut RRTS, Mumbai&ndash;Ahmedabad High Speed
-        Rail, and Chennai Metro Rail, among others.
-      </p>
-    </article>
-
-    <article class="entry">
-      <div class="entry-header">
-        <a href="https://www.iitism.ac.in" target="_blank" rel="noopener">
-          <img src="assets/logos/IIT-ISM.svg" alt="IIT (ISM) Dhanbad logo" class="company-logo">
-        </a>
-        <div>
-          <h3>Teaching Assistant</h3>
-          <p class="entry-meta">Indian Institute of Technology (ISM), Dhanbad, India &middot; 2019&ndash;2021</p>
-        </div>
-      </div>
-      <p>Taught alongside Prof. VMSR Murthy: lectures, course materials, grading, and lab mentoring for undergraduates.</p>
-    </article>
-
-    <article class="entry">
-      <h3>Engineering Intern</h3>
-      <p class="entry-meta">Al-Farouk for Engineering Works Co., Cairo, Egypt &middot; 2019&ndash;2020</p>
-      <p>Planned and scheduled an underground optical fiber network for Nasr City, Cairo, including cost estimation and site inspection.</p>
-    </article>
-
-  </section>
-
-  <section>
-    <h2>Education</h2>
-    <ul class="edu-list">
-      <li>PhD, Underground Construction and Tunnel Engineering, Colorado School of Mines (2024&ndash;present)</li>
-      <li>Graduate Certificate, Underground Construction and Tunnel Engineering, Colorado School of Mines (2025)</li>
-      <li>M.Tech, Tunnelling and Underground Space Technology, Indian Institute of Technology (ISM), Dhanbad (2021, Gold Medalist)</li>
-      <li>B.E., Civil Engineering, University of Kashmir (2018)</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Hobbies</h2>
-    <p>
-      I enjoy hiking, running, traveling and exploring the outdoors. I also like to cook
-      in my free time and try different recipes. Photos coming soon.
-    </p>
-    <ul class="hobby-list">
-      <li class="hobby"><span class="hobby-icon" aria-hidden="true">&#129406;</span> Hiking</li>
-      <li class="hobby"><span class="hobby-icon" aria-hidden="true">&#127939;</span> Running</li>
-      <li class="hobby"><span class="hobby-icon" aria-hidden="true">&#127757;</span> Traveling</li>
-      <li class="hobby"><span class="hobby-icon" aria-hidden="true">&#127859;</span> Cooking</li>
-    </ul>
-  </section>
-
-
-  <section>
-    <h2>Skills</h2>
-    <p>Click a level to mark where you'd put each one.</p>
-    <ul class="skill-list">
-      <li class="skill">
-        <span class="skill-name">Flac3D</span>
-        <span class="level-buttons" role="group" aria-label="Skill level for Flac3D">
-          <button type="button" class="level-btn" data-level="Familiar">Familiar</button>
-          <button type="button" class="level-btn active" data-level="Proficient">Proficient</button>
-          <button type="button" class="level-btn" data-level="Expert">Expert</button>
-        </span>
-      </li>
-      <li class="skill">
-        <span class="skill-name">RS2</span>
-        <span class="level-buttons" role="group" aria-label="Skill level for RS2">
-          <button type="button" class="level-btn" data-level="Familiar">Familiar</button>
-          <button type="button" class="level-btn" data-level="Proficient">Proficient</button>
-          <button type="button" class="level-btn active" data-level="Expert">Expert</button>
-        </span>
-      </li>
-      <li class="skill">
-        <span class="skill-name">S/Unwedge</span>
-        <span class="level-buttons" role="group" aria-label="Skill level for S/Unwedge">
-          <button type="button" class="level-btn" data-level="Familiar">Familiar</button>
-          <button type="button" class="level-btn" data-level="Proficient">Proficient</button>
-          <button type="button" class="level-btn active" data-level="Expert">Expert</button>
-        </span>
-      </li>
-      <li class="skill">
-        <span class="skill-name">Slope/W</span>
-        <span class="level-buttons" role="group" aria-label="Skill level for Slope/W">
-          <button type="button" class="level-btn" data-level="Familiar">Familiar</button>
-          <button type="button" class="level-btn" data-level="Proficient">Proficient</button>
-          <button type="button" class="level-btn active" data-level="Expert">Expert</button>
-        </span>
-      </li>
-      <li class="skill">
-        <span class="skill-name">Midas Civil</span>
-        <span class="level-buttons" role="group" aria-label="Skill level for Midas Civil">
-          <button type="button" class="level-btn" data-level="Familiar">Familiar</button>
-          <button type="button" class="level-btn" data-level="Proficient">Proficient</button>
-          <button type="button" class="level-btn active" data-level="Expert">Expert</button>
-        </span>
-      </li>
-      <li class="skill">
-        <span class="skill-name">STAAD Pro</span>
-        <span class="level-buttons" role="group" aria-label="Skill level for STAAD Pro">
-          <button type="button" class="level-btn" data-level="Familiar">Familiar</button>
-          <button type="button" class="level-btn" data-level="Proficient">Proficient</button>
-          <button type="button" class="level-btn active" data-level="Expert">Expert</button>
-        </span>
-      </li>
-      <li class="skill">
-        <span class="skill-name">Dlubal RFEM5 / RSTAB9</span>
-        <span class="level-buttons" role="group" aria-label="Skill level for Dlubal RFEM5 / RSTAB9">
-          <button type="button" class="level-btn" data-level="Familiar">Familiar</button>
-          <button type="button" class="level-btn" data-level="Proficient">Proficient</button>
-          <button type="button" class="level-btn active" data-level="Expert">Expert</button>
-        </span>
-      </li>
-      <li class="skill">
-        <span class="skill-name">Strand-7</span>
-        <span class="level-buttons" role="group" aria-label="Skill level for Strand-7">
-          <button type="button" class="level-btn" data-level="Familiar">Familiar</button>
-          <button type="button" class="level-btn active" data-level="Proficient">Proficient</button>
-          <button type="button" class="level-btn" data-level="Expert">Expert</button>
-        </span>
-      </li>
-      <li class="skill">
-        <span class="skill-name">Niosh</span>
-        <span class="level-buttons" role="group" aria-label="Skill level for Niosh">
-          <button type="button" class="level-btn" data-level="Familiar">Familiar</button>
-          <button type="button" class="level-btn active" data-level="Proficient">Proficient</button>
-          <button type="button" class="level-btn" data-level="Expert">Expert</button>
-        </span>
-      </li>
-      <li class="skill">
-        <span class="skill-name">AdsecOaSys</span>
-        <span class="level-buttons" role="group" aria-label="Skill level for AdsecOaSys">
-          <button type="button" class="level-btn" data-level="Familiar">Familiar</button>
-          <button type="button" class="level-btn active" data-level="Proficient">Proficient</button>
-          <button type="button" class="level-btn" data-level="Expert">Expert</button>
-        </span>
-      </li>
-      <li class="skill">
-        <span class="skill-name">Rhino</span>
-        <span class="level-buttons" role="group" aria-label="Skill level for Rhino">
-          <button type="button" class="level-btn" data-level="Familiar">Familiar</button>
-          <button type="button" class="level-btn active" data-level="Proficient">Proficient</button>
-          <button type="button" class="level-btn" data-level="Expert">Expert</button>
-        </span>
-      </li>
-      <li class="skill">
-        <span class="skill-name">AutoCAD</span>
-        <span class="level-buttons" role="group" aria-label="Skill level for AutoCAD">
-          <button type="button" class="level-btn" data-level="Familiar">Familiar</button>
-          <button type="button" class="level-btn active" data-level="Proficient">Proficient</button>
-          <button type="button" class="level-btn" data-level="Expert">Expert</button>
-        </span>
-      </li>
-      <li class="skill">
-        <span class="skill-name">Python</span>
-        <span class="level-buttons" role="group" aria-label="Skill level for Python">
-          <button type="button" class="level-btn active" data-level="Familiar">Familiar</button>
-          <button type="button" class="level-btn" data-level="Proficient">Proficient</button>
-          <button type="button" class="level-btn" data-level="Expert">Expert</button>
-        </span>
-      </li>
-      <li class="skill">
-        <span class="skill-name">VS Code</span>
-        <span class="level-buttons" role="group" aria-label="Skill level for VS Code">
-          <button type="button" class="level-btn active" data-level="Familiar">Familiar</button>
-          <button type="button" class="level-btn" data-level="Proficient">Proficient</button>
-          <button type="button" class="level-btn" data-level="Expert">Expert</button>
-        </span>
-      </li>
-    </ul>
-  </section>
-
-  <script>
-    document.querySelectorAll('.skill').forEach(function (skill) {
-      skill.querySelectorAll('.level-btn').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          skill.querySelectorAll('.level-btn').forEach(function (b) {
-            b.classList.remove('active');
-          });
-          btn.classList.add('active');
-        });
-      });
-    });
-  </script>
 
 </body>
 </html>
